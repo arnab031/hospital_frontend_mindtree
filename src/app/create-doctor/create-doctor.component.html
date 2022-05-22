@@ -1,5 +1,5 @@
 <div class="col-md-6 offset-md-3">
-    <h3>Create Doctore</h3>
+    <h3>Add Doctor</h3>
     <form (ngSubmit)="onSubmit()">
       <div class="form-group" style="margin-top: 10px">
         <label>Name</label>
@@ -13,13 +13,36 @@
       </div>
       <div class="form-group">
         <label>Gender</label>
-        <input
+        <!-- <input
           type="text"
           class="form-control"
           id="gender"
           [(ngModel)]="doctor.gender"
           name="gender"
-        />
+        /> -->
+        <div class="form-group col-md-4 mb-1">
+          <input
+            type="radio"
+            class="form-check-input"
+            id="gender"
+            value="Male"
+            name="gender"
+            [(ngModel)]="doctor.gender"
+          />
+          <label class="form-check-label" for="exampleCheck1"> Male</label>
+        </div>
+
+        <div class="form-group col-md-4 mb-1">
+          <input
+            type="radio"
+            class="form-check-input"
+            id="gend"
+            value="Female"
+            name="gender"
+            [(ngModel)]="doctor.gender"
+          />
+          <label class="form-check-label" for="exampleCheck1"> Female</label>
+        </div>
       </div>
       <div class="form-group">
         <label>Age</label>

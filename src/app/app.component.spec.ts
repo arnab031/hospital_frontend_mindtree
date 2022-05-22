@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'hospital_frontend'`, () => {
+  it(`should have as title 'Hospital Management Application'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('hospital_frontend');
+    expect(app.title).toEqual('Hospital Management Application');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('hospital_frontend app is running!');
+    expect(compiled.querySelector('.text-center')?.textContent).toContain('Hospital Management Application');
   });
 });

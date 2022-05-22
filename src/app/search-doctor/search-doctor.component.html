@@ -1,5 +1,5 @@
 <div class="col-md-6 offset-md-3">
-  <h3>Search Doctore</h3>
+  <h3>Search Doctor</h3>
   <form (ngSubmit)="onSubmit()">
     <!-- <div class="form-group" style="margin-top: 10px">
         <label>Id</label>
@@ -7,7 +7,7 @@
           type="text"
           class="form-control"
           id="id"
-          [(ngModel)]="patient.id"
+          [(ngModel)]="doctor.id"
           name="id"
         />
       </div> -->
@@ -31,6 +31,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Specialized Field</th>
         <th>Number of Patient Attended</th>
@@ -38,6 +39,7 @@
     </thead>
     <tbody>
       <tr>
+        <td>{{doctor.id}}</td>
         <td>{{ doctor.name }}</td>
         <td>{{ doctor.specialist_fields }}</td>
         <td>{{ doctor.patientDto?.length }}</td>
